@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice21</title>
+</head>
+<body>
+    <h1>두 수를 이용한 산술연산</h1>
+    <script>
+        var num1 = prompt("첫 번째 정수 입력: ");
+        var num2 = prompt("두 번째 정수 입력: ");
+        var operator = prompt("연산자를 입력하시요.");
+
+        switch(operator)
+        {
+        case '+': 
+            result = parseInt(num1) + parseInt(num2);
+            break;
+        case '-':
+            result = parseInt(num1) - parseInt(num2);
+            break;
+        case '*':
+            result = parseInt(num1) * parseInt(num2);
+            break;
+        case '/':
+            result = parseInt(num1) / parseInt(num2);
+            break;
+        }
+        
+
+        document.write(num1 + " " + operator + " " + num2 + " = " + result);
+    </script>
+
+</body>
+</html>

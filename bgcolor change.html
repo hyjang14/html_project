@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice32</title>
+</head>
+<body>
+    <p id="d1"></p>
+    <div id="result">
+    <script>
+        
+            document.write("<h1>방문 시간에 따라 배경색 변경</h1>");
+            document.write("<h3>페이지 방문 초시간이 짝수이면 배경색이 yellow, 홀수이면 lightblue로 설정</h3>");
+       
+    </script>
+     
+    </div>
+
+    <script>
+        
+
+
+        var cnt = 1;
+
+        function color()
+        {
+            if (cnt % 2 == 0)
+            {
+            document.querySelector("body").style.background = "yellow";
+            }
+            else
+            {
+            document.querySelector("body").style.background = "lightblue";
+            
+            }
+            cnt = cnt + 1;
+        }
+        var clearID = setInterval("color()", 1000);
+        var today = new Date();
+        document.querySelector("#d1").innerHTML=today.getHours() + "시: " + today.getMinutes() + "분: " + today.getSeconds() + "초";
+        
+       
+    </script>
+
+   
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>practice34</title>
+    <!--함수 정의는 head에 작성-->
+</head>
+<body>
+	<button onclick="inntext()">innerText로 표시</button>
+	<button onclick="innhtml()">innerHTML로 표시</button>
+	<h1>현재 시각: </h1>
+	<div id="current"></div>
+    <script>
+        var now = new Date();
+        var obj = document.getElementById("current");//여기는 id만 들고오는거여서 # 안씀
+        function inntext() {
+            
+            obj.innerText = now;//text는 문자열만 쓸 수 있음
+            //var info = obj.innerText;
+            obj.style.backgroundColor = "yellow";
+            styleDisplay();
+        }
+        function innhtml() {
+            
+            obj.innerHTML = "<h3><em>" + now + "</em></h3>";//태그도 넣을 수 있다
+            obj.style.backgroundColor = "lightcyan";
+            styleDisplay();
+        }
+
+        function styleDisplay() {
+            obj.style.border = "1px solid red";
+            obj.style.width = "500px";
+            obj.style.padding = "30px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice26</title>
+    <style>
+        h3 {
+            text-align: center;
+            border: 1px solid;
+            width: 150px;
+            margin: auto;
+            padding: 20px;
+            background-color: lightgreen;
+        }
+        h2 {
+            text-align: center;
+            border: 1px solid;
+            width: 150px;
+            margin: auto;
+            padding: 20px;
+            background-color: yellow;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       let x = Math.floor(Math.random() * 50);
+       var i = 1;
+       while(true)
+       {
+       let n = prompt("추측한 수는");
+       if(x > n)
+       {
+        alert("더 큰 수를 말하시오.")
+        i++;
+        continue;
+       }
+       else if(x < n)
+       {
+        alert("더 작은 수를 말하시오.")
+        i++;
+        continue;
+       }
+       else
+       document.write("<h3>정답은" + " " +  x + "<br></h3>");
+       break;
+      } 
+      document.write("<h2>시도횟수는" + " " + i + "번</h2>");
+        
+    </script>
+</body>
+</html>
